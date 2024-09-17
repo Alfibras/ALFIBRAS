@@ -1,0 +1,187 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ALFIBRAS</title>
+    <link rel="stylesheet" href="estilos.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+
+
+</head>
+<body>
+   
+    <header class="header">
+        <nav>
+            <a href="#inicio" class="logo">
+                <img src="img/logo_alfibras.jpeg" alt="Logo de ALFIBRAS">
+            </a>
+            <button class="menu-toggle" id="menu-toggle"> ☰ </button>
+                
+                <ul class="nav-links" id="nav-links">
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#nosotros">Nosotros</a></li>
+                    <li><a href="#productos">Productos</a></li>
+                </ul>
+                <ul class="nav-icons">
+                    <li>
+                        <a href="carrito.html" class="carrito-icon">
+                            <i class="bi bi-cart"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="registro.html" class="persona-icon">
+                            <i class="bi bi-person"></i> 
+                        </a>
+                    </li>
+                </ul>
+        </nav>
+        
+    </header>
+
+    <div id="carouselExampleIndicators" class="carousel slide">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="img/trabajador fibra de vidrio.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="img/trabajador.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="img/trabajador2.jpg" class="d-block w-100" alt="...">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+      <section id="inicio">
+        <div class="nosotros">
+            <h2>Nosotros</h2>
+        </div>
+      </section>
+      <section id="inicio">
+        <div class="container">
+            <h2>Quienes Somos?</h2>
+            <p>Alfibras es una empresa con una sólida trayectoria en la fabricación y comercialización de productos de fibra de vidrio, destacándose en diversos sectores como el industrial, automotriz y de construcción.
+                En el sector industrial, ofrecemos soluciones robustas que cumplen con los más altos estándares de durabilidad y rendimiento. Para el sector automotriz, nuestros componentes mejoran el rendimiento y la estética de los vehículos, incluyendo parachoques, capós y alerones. <br>
+                En el ámbito de campamento y obras civiles, proporcionamos productos versátiles y duraderos para aplicaciones temporales y permanentes, como estructuras de soporte y recubrimientos.
+                Comprometidos con la innovación y la calidad, en Alfibras nos esforzamos por ofrecer soluciones personalizadas que satisfagan las necesidades específicas de nuestros clientes, asegurando la máxima satisfacción y un rendimiento óptimo en cada producto.</p>
+        </div>
+    </section>
+
+    <section id="nosotros">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="mision">
+                        <h2>Misión</h2>
+                        <p>ALFIBRAS es una microempresa, que busca proporcionar productos en fibra de vidrio, acorde con las exigencias del mercado satisfaciendo los gustos y expectativas de los consumidores, permitiendo el crecimiento institucional e integrarnos en la búsqueda de un desarrollo nacional.</p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="vision">
+                        <h2>Visión</h2>
+                        <p>Ser reconocidos como grandes productores de artículos en fibra de vidrio, implementando procesos de perfeccionamiento e innovación en el mercado y así en un futuro convertirnos en lideres y gestores de procesos manufactureros.​</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="productos">
+        <div class="container">
+            <h2>Productos</h2>
+            <div class="catalogo">
+                <div class="producto">
+                    <img src="silleteria.jpeg" alt="Producto 1">
+                    <h3>Parachoques Delantero</h3>
+                    <p>Alta resistencia y diseño moderno.</p>
+                    <p>Precio: $250,000</p>
+                    <button onclick="agregarAlCarrito(1, 'Parachoques Delantero', 250000)">Añadir al carrito</button>
+                </div>
+                <div class="producto">
+                    <img src="silleteria.jpeg" alt="Producto 2">
+                    <h3>Techo de Fibra</h3>
+                    <p>Durable y ligero, fácil instalación.</p>
+                    <p>Precio: $450,000</p>
+                    <button onclick="agregarAlCarrito(1, 'Parachoques Delantero', 250000)">Añadir al carrito</button>
+                </div>
+                <div class="producto">
+                    <img src="silleteria.jpeg" alt="Producto 3">
+                    <h3>Puerta Lateral</h3>
+                    <p>Fácil de instalar y resistente al clima.</p>
+                    <p>Precio: $300,000</p>
+                    <button onclick="agregarAlCarrito(1, 'Parachoques Delantero', 250000)">Añadir al carrito</button>
+                </div>
+                <div class="producto">
+                    <img src="silleteria.jpeg" alt="Producto 4">
+                    <h3>Capó</h3>
+                    <p>Estilo y durabilidad garantizada.</p>
+                    <p>Precio: $500,000</p>
+                    <button onclick="agregarAlCarrito(1, 'Parachoques Delantero', 250000)">Añadir al carrito</button>
+                </div>
+                <div class="producto">
+                    <img src="silleteria.jpeg" alt="Producto 5">
+                    <h3>Alerón Trasero</h3>
+                    <p>Mejora la aerodinámica del vehículo.</p>
+                    <p>Precio: $200,000</p>
+                    <button onclick="agregarAlCarrito(1, 'Parachoques Delantero', 250000)">Añadir al carrito</button>
+                </div>
+            
+            </div>
+        </div>
+    </section>
+
+    <section id="direccion">
+        <div class="container">
+            <h2>Dirección</h2>
+            <div class="direccion-cuadro" style="display: flex; flex-direction: column; align-items: center; text-align: center;">
+                <p>Engativa, Barrio Villa Gladis, Calle 165 a N° 111b - 51</p>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.3764633490096!2d-74.13516052596295!3d4.704491741626644!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f9cac4b852bdf%3A0x233b60857ba152a9!2sCl.%2065a%20%23111b73%2C%20Bogot%C3%A1!5e0!3m2!1ses-419!2sco!4v1726416930106!5m2!1ses-419!2sco"
+                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                
+                <!-- Íconos de redes sociales -->
+                <div class="social-icons-footer">
+                    <a href="https://facebook.com" target="_blank" class="social-icon">
+                        <i class="bi bi-facebook"></i>
+                    </a>
+                    <a href="https://instagram.com" target="_blank" class="social-icon">
+                        <i class="bi bi-instagram"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 ALFIBRAS S.A.S. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    
+
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+</body>
+</html>
+

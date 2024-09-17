@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Cuenta</title>
+    <link rel="stylesheet" href="estilos.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="container2">
+            <div class="logo">
+                <img src="img/logo_alfibras.jpeg" alt="Logo">
+            </div>
+            <nav>
+                <button class="menu-toggle">&#9776;</button>
+                <ul class="nav-links">
+                    <<li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#nosotros">Nosotros</a></li>
+                    <li><a href="#productos">Productos</a></li>
+                </ul>
+                <ul class="nav-icons"></ul>
+                    <li>
+                        <a href="carrito.html" class="carrito-icon">
+                            <i class="bi bi-cart"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="registro.html" class="persona-icon">
+                            <i class="bi bi-person"></i> 
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="container">
+            <h2>Mi Cuenta</h2>
+            <div class="account-section">
+                <div class="account-tab">
+                    <button class="tab-button" data-tab="edit-profile">Editar Perfil</button>
+                    <button class="tab-button" data-tab="invoice-history">Historial de Facturas</button>
+                    <button class="tab-button" data-tab="current-orders">Pedidos en Curso</button>
+                    <button class="tab-button" data-tab="cart-balance">Saldo del Carrito</button>
+                </div>
+                <div class="tab-content">
+                    <div id="edit-profile" class="tab-content-item">
+                        <h3>Editar Perfil</h3>
+                        <form>
+                            <div class="form-group">
+                                <label for="phone">Fecha Nacimiento:</label>
+                                <input type="tel" id="fnacimiento" name="fnacimiento">
+                            </div>
+                            <div class="form-group">
+                                <label for="name">Nombre:</label>
+                                <input type="text" id="name" name="name">
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Correo Electrónico:</label>
+                                <input type="email" id="email" name="email">
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Teléfono:</label>
+                                <input type="tel" id="phone" name="phone">
+                            </div>
+                        
+                            <button type="submit">Guardar Cambios</button><br>
+                        </form>
+                    </div>
+
+                    <div id="invoice-history" class="tab-content-item">
+                        <h3>Historial de Facturas</h3>
+                        <!-- Aquí iría el historial de facturas -->
+                        <p>No hay facturas disponibles.</p>
+                    </div>
+
+                    <div id="current-orders" class="tab-content-item">
+                        <h3>Pedidos en Curso</h3>
+                        <!-- Aquí iría el detalle de los pedidos en curso -->
+                        <p>No hay pedidos en curso.</p>
+                    </div>
+
+                    <div id="cart-balance" class="tab-content-item">
+                        <h3>Saldo del Carrito</h3>
+                        <!-- Aquí iría el saldo del carrito -->
+                        <p>Saldo actual: $0.00</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 ALFIBRAS S.A.S. Todos los derechos reservados.</p>
+        
+    </footer>
+
+    <script>
+        document.querySelectorAll('.tab-button').forEach(button => {
+            button.addEventListener('click', () => {
+                const tabId = button.getAttribute('data-tab');
+                document.querySelectorAll('.tab-content-item').forEach(tabContent => {
+                    tabContent.style.display = 'none';
+                });
+                document.getElementById(tabId).style.display = 'block';
+            });
+        });
+
+        // Activate the first tab by default
+        document.querySelector('.tab-button').click();
+    </script>
+</body>
+</html>

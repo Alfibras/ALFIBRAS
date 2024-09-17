@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito y Personalización</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <nav>
+            <button class="menu-toggle" id="menu-toggle">
+                &#9776;
+            </button>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="index.html#nosotros">Nosotros</a></li>
+                <li><a href="index.html#productos">Productos</a></li>
+            </ul>
+            <ul class="nav-icons">
+                <li>
+                    <a href="carrito.html" class="carrito-icon">
+                        <i class="bi bi-cart"></i>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Sección del Carrito -->
+    <section id="carrito">
+        <div class="container">
+            <h2>Carrito de compras</h2>
+            <div id="carrito-contenido">
+                <!-- Los productos del carrito se mostrarán aquí -->
+            </div>
+            <button onclick="window.location.href='pasarela.html'">Ir a la pasarela de pagos</button>
+        </div>
+    </section>
+
+    <!-- Sección de Personalización -->
+<section id="personalizacion">
+    <div class="container">
+        <h2>Personaliza tu pieza</h2>
+        <form id="form-personalizacion">
+            <label for="nombre">Nombre del Producto:</label>
+            <input type="text" id="nombre" name="nombre" required>
+            <label for="ancho">Ancho:</label>
+            <input type="number" id="ancho" name="ancho">
+            <label for="altura">Altura:</label>
+            <input type="number" id="altura" name="altura">
+            <label for="color">Color:</label>
+            <input type="text" id="color" name="color">
+            <label for="especificaciones">Especificaciones:</label>
+            <textarea id="especificaciones" name="especificaciones"></textarea>
+            <div class="mb-3">
+                <label for="formFileSm" class="form-label">Inserte archivo:</label>
+                <input class="form-control form-control-sm" id="formFileSm" type="file">
+            </div>
+            <button type="submit">Añadir al carrito</button>
+        </form>
+    </div>
+</section>
+
+<script>
+    document.getElementById('form-personalizacion').addEventListener('submit', function(event) {
+        event.preventDefault();
+        
+        const nombre = document.getElementById('nombre').value;
+        const precio = document.getElementById('precio').value;
+        const producto = { nombre, precio };
+
+        // Llamar a la función para añadir al carrito
+        añadirAlCarrito(producto);
+
+        // Redirigir al carrito
+        window.location.href = 'carrito.html';
+    });
+</script>
+
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 ALFIBRAS S.A.S. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
